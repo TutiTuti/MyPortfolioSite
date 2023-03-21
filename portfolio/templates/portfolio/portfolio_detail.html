@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Post_archvie.html{% endblock %}
+
+{% block content %}
+
+    <h2>{{ object.title }}</h2>
+
+    <p>
+        {% if object.get_previous %}
+        <a href="{{ object.get_previous.get_absolute_url }}" title="View previous post">
+            &laquo;-- {{ object.get_previous }}
+        </a>
+        {% endif %}
+
+        {% if object.get_next %}
+        | <a href="{{ object.get_next.get_absolute_url }}" title="View newt post">
+        {{ object.get_next }} --&raquo;
+        </a>
+        {% endif %}
+    </p>
+
+    <p>{{ object.modify_dt|date:"j F Y" }}</p>
+    <br>
+    <div class="row">
+        <div class="col-md-9">
+            <a href="{{ object.image.url }}">
+                <img src="{{ object.image.url }}" style="width: 100%;">
+            </a>
+        </div></div>
+    <div>
+        <p><br></p>
+        <span style="font-size:1.8em;">Content</span>
+        <br>{{object.content|linebreaks }}
+    </div>
+
+{% endblock %}

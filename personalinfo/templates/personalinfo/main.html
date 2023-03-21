@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra-style %}
+<style type="text/css">
+.home-image {
+    background-image: url("{% static 'img/graph/foo3.jpg' %}");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100%;
+    height: 400px;
+    border-top: 10px soluid #ccc;
+
+    padding: 220px 0 0 300px;
+  }
+.jb-large { font-size: large; }
+.jb-x-large { font-size: x-large; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<h1>My Profile</h1>
+<br><br>
+<meta charset="utf-8">
+
+
+<div class="row">
+    <div class="col">
+      <h3>Profile</h3>
+        <img src="/static/img/myface.jpg" width="170px" align="left">
+        <b>최용수(Choi yongsu)<br>1998.02.20<br>phone:+82 10-4023-1556<br>E-mail address : cys980220@gmail.com<br>Kakao : szyhg456</b>
+        <b class="jb-large"><br><br><br><br><br>좌우명 : 남보다 시간을 더 투자할 각오를 한다.</b><p>남들보다 느리다면 시간을 더 투자해 따라잡겠다는  &emsp;의지을 보여주는 사람이 되고자 합니다. </p>
+    </div>
+    <div class="col">
+      <h2>GPA Graph</h2>
+      <div class="home-image" style="width:700px;"></div>
+      <div class="col">
+        <p></p></div>
+</div>
+<div class="row">
+    <div class="col-sm-5">
+        <b class="jb-x-large">&emsp;&emsp;Coding Skills<br></b>
+        <b class="jb-large"> &emsp;&emsp;&emsp;Python &emsp; &emsp;&emsp; &emsp;&emsp;   60 / 100 point
+        <br>&emsp;&emsp;&emsp;C language &emsp; &emsp; &emsp; 30 / 100 point
+        <br>&emsp;&emsp;&emsp;R language &emsp; &emsp; &emsp; 40 / 100 point
+        <br>&emsp;&emsp;&emsp;Django &emsp; &emsp; &emsp;&emsp;&emsp; 45 / 100 point
+        <br>&emsp;&emsp;&emsp;JAVA &emsp;&emsp;&emsp;&emsp; &emsp; &emsp; 20 / 100 point</b>
+    </div>
+
+
+    <div class="col-sm-6">
+        <table border="2" width="700px">
+            <th>Education</th>
+            <tr align="center">
+                <td>2017/03 ~  : 천안공주대 산업시스템공학과 </td>
+            </tr>
+            <tr>
+        </table>
+        <table border="2" width="700px">
+            <th>Work Experiences</th>
+                <tr align="center">
+                    <td>2020/04/14~2020/07/14 : 아산삼성디스플레이_전기설비_작업반장</td>
+                </tr>
+                <tr align="center">
+                    <td>2018/01/14~2018/06/17 : 성정중앙점 CU_스토어매니저</td>
+                </tr>
+                <tr>
+                    <td>&emsp;</td>
+                </tr>
+        </table>
+    </div>
+
+
+
+</div>
+
+
+{% endblock content %}

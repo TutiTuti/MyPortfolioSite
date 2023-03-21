@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Post_archvie.html{% endblock %}
+
+{% block extra-style %}
+<style>
+thumbnail {
+    border: 3px solid #ccc;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+    <h1>e-Portfolio Archives until {% now "N d, Y" %}</h1>
+    <ul>
+        {% for date in date_list %}
+        <span style="font-size:1.5em;">
+        <li style="display: inline;">
+            <a class="text-dark"  href="{% url 'portfolio:portfolio_year_archive' date|date:'Y' %}">&nbsp;Year{{ date|date:"Y" }}&nbsp;</a></li></span>
+        {% endfor %}
+    </ul>
+    <br/>
+        <ul>
+            {% for post in object_list|slice:":5" %}
+            <li>{{ post.modify_dt|date:"Y-m-d" }}&nbsp;&nbsp;&nbsp;
+            <a class="text-dark" href="{{ post.get_absolute_url }}">
+                    <img src="{{ post.image.thumb_url }}" style="width: 10%;">{{ post.title }}
+            </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

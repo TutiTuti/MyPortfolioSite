@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}home.html{% endblock %}
+
+{% block extra-style %}
+<style type="text/css">
+.home-image {
+    background-image: url("{% static 'img/kongju.jpg' %}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 500px;
+    border-top: 10px soluid #ccc;
+    border-bottom: 10px solid #ccc;
+    padding: 220px 0 0 300px;
+  }
+  .title {
+    color: white;
+    font-weight: bold;
+    font-size: 50px
+  }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="home-image">
+  <h2 class="title">최용수의 e-Portfolio</h2>
+</div>
+
+<hr style="margin: 10px 0;">
+
+<div class="row text-center">
+  <div class="col-sm-5">
+    <h3>e-Portfolio</h3>
+    <p>이 사이트는 학기중에 배웠던 수업내용이나 자기개발 내용을 기록하기 위해 만든 사이트로 주로 파이썬, c언어등을 올릴 예정입니다.</p>
+  </div>
+  <div class="col-sm-6">
+    <h3>STUDYING</h3>
+
+        <span class="navbar-brand" href="#" >
+        <img src="static/img/python.png" style="width:40px;">
+        <class font-size:50px>python</class></span>
+
+        <span class="navbar-brand" href="#" >
+        <img src="static/img/c.png" style="width:40px;">
+        <class font-size:50px>c</class></span>
+
+        <span class="navbar-brand" href="#" >
+        <img src="static/img/django.png" style="width:40px;">
+        <class font-size:50px>django</class></span>
+      <p></p>
+
+        <span class="navbar-brand" href="#" >
+        <img src="static/img/r.png" style="width:40px;">
+        <class font-size:50px>R</class></span>
+
+        <span class="navbar-brand" href="#" >
+        <img src="static/img/java.png" style="width:50px;">
+        <class font-size:50px>JAVA</class></span>
+
+  </div>
+
+  <div><br><br><br><br><br><br><br><br><br></div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}
+<footer class="fixed-bottom bg-dark">
+  <div class="text-white font-italic text-right mr-1">
+    Contact&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br>
+    KONGJU NATIONAL UNIVERSITY&nbsp;&nbsp;Industrial System Engineering&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;e-mail : cys201701898@kongju.ac.kr&emsp;&ensp;
+    <br>Phone number : 010-0000-0000&emsp;&emsp;&emsp;&ensp;
+  </div>
+</footer>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
